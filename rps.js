@@ -1,23 +1,36 @@
 function getComputerChoice(){
-    let count1 = count2 = count3 = 0;
-    for(let x = 0; x<1000000; x++){
     let choice = Math.floor(Math.random()*3);
     switch (choice){
         case 0:{
-            count1++;
+            return "Rock";
             break;
         }
         case 1:{
-            count2++;
+            return "Paper";
             break;
         }
         case 2:{
-            count3++;   
+            return "Scissors";   
             break;
         }
     }
 }
-console.log(count1/10000);
-console.log(count2/10000);
-console.log(count3/10000);
+function eval(playerSelection, computerSelection){
+    playerSelection = playerSelection.toUpperCase();
+    computerSelection = computerSelection.toUpperCase()
+    if (playerSelection == "ROCK" && computerSelection == "PAPER" || playerSelection == "PAPER" && computerSelection == "SCISSORS" || playerSelection == "SCISSORS" && computerSelection == "ROCK" )
+    {
+        return "You Lose! " + computerSelection+" beats "+ playerSelection;
+    }
+    else if(playerSelection == "PAPER" && computerSelection == "ROCK" || playerSelection == "SCISSORS" && computerSelection == "PAPER" || playerSelection == "ROCK" & computerSelection == "SCISSORS")
+    {
+        return "You Win! " + playerSelection+" beats "+ computerSelection;
+    }
+    else{
+        return "It's a tie!";
+    }
 }
+console.log(eval("rock", "paper"));
+console.log(eval("rock", "scissors"));
+console.log(eval("rock", "rock"));
+
