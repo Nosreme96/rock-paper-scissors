@@ -1,0 +1,58 @@
+
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    margin: auto;
+
+}
+div{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px;
+    border-radius: 10px;
+    border: rgb(109, 107, 107) solid;
+    background-color: rgb(185, 184, 182);
+    height: auto;
+    margin: auto;
+    font-size: 16px;
+}
+h1.header{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+button.rock, button.paper, button.scissors{
+    border-radius: 5px;
+    width: 100px;
+    height: auto;
+    color: white;
+    font-size: 16px;
+    margin: 8px;
+}
+.rock{
+    background-color: brown;
+}
+.paper{
+    background-color: blue;
+}
+.scissors{
+    background-color: black;
+}
+.reset{
+    font-size:16px;
+    margin: 16px;
+}
+.result-label, .score-label, .winner-label {
+    display: flex;
+    flex: 1 0 auto;
+    background-color: rgb(250, 0, 0);
+    color: white;
+    padding: 5px;
+    justify-content: center;
+}
+.winner{
+    font-size: 24px;
+}
